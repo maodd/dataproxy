@@ -1,5 +1,5 @@
-application: jsonpdataproxy-hrd
-version: 4
+# application: jsonpdataproxy-hrd
+# version: 4
 runtime: python27
 api_version: 1
 # we are using CGI atm so can only have threadsafe=false

@@ -32,7 +32,7 @@ Supported reply format (``format=`` parameter) types:
 Live Service
 ++++++++++++
 
-http://jsonpdataproxy.appspot.com/
+http://goa-open-gov.appspot.com/
 
 
 API Documentation
@@ -86,7 +86,7 @@ CSV Parameters:
 
 Get whole file as json::
 
-    DATA_PROXY_URL?url=http://democracyfarm.org/f/ckan/foo.csv&format=json
+    DATA_PROXY_URL?url=https://open.alberta.ca/dataset/83cd32a8-cf69-4473-8e65-2eca61aced06/resource/f72da2b2-9919-49eb-90ce-5ce495f41d4d/download/births-average-gestation-age-and-birth-weightxlsx.xlsx&max-results=1000&type=XLSX&_=1581541458707
     
 result::
 
@@ -95,7 +95,7 @@ result::
         [ "first-value", "second-value", "third-value" ],
         ...
       ],
-      "url" : "http://democracyfarm.org/f/ckan/foo.csv",
+      "url" : "https://open.alberta.ca/dataset/83cd32a8-cf69-4473-8e65-2eca61aced06/resource/f72da2b2-9919-49eb-90ce-5ce495f41d4d/download/births-average-gestation-age-and-birth-weightxlsx.xlsx&max-results=1000&type=XLSX&_=1581541458707",
       // backwards compatibility - will be deprecated at some point - use metadata
       "fields": [
         "first-field-id",
@@ -118,7 +118,7 @@ result::
 
 Get only first 3 rows as json::
 
-    DATA_PROXY_URL?url=http://democracyfarm.org/f/ckan/foo.csv&max-results=3&format=json
+    DATA_PROXY_URL?url=https://open.alberta.ca/dataset/83cd32a8-cf69-4473-8e65-2eca61aced06/resource/f72da2b2-9919-49eb-90ce-5ce495f41d4d/download/births-average-gestation-age-and-birth-weightxlsx.xlsx&max-results=1000&type=XLSX&_=1581541458707
     
 result::
 
@@ -130,7 +130,7 @@ result::
        ],
        "max-results": 3,
        "header" : {
-          "url" : "http://democracyfarm.org/f/ckan/foo.csv",
+          "url" : "https://open.alberta.ca/dataset/83cd32a8-cf69-4473-8e65-2eca61aced06/resource/f72da2b2-9919-49eb-90ce-5ce495f41d4d/download/births-average-gestation-age-and-birth-weightxlsx.xlsx&max-results=1000&type=XLSX&_=1581541458707",
        }
     }
 
@@ -173,12 +173,12 @@ Install (Local)
 
 Get the repo::
 
-    git clone https://github.com/okfn/dataproxy
+    git clone https://github.com/maodd/dataproxy
 
 Install the submodules (we use submodules or downloaded libraries rather than
 requirements file as we need to deploy to app engine)::
 
-    git submobule init
+    git submodule init
     git submodule update
 
 
